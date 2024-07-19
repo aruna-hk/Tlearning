@@ -3,7 +3,7 @@ from flask import Flask, g, request, abort, jsonify
 from flask import session, redirect, make_response
 from flask import url_for
 from flask import render_template
-from sqlalchemy import select, update, and_, or_, join
+from sqlalchemy import select, update, and_, or_, join, delete
 from sqlalchemy.sql import func
 import json
 from flask_cors import CORS
@@ -21,7 +21,7 @@ storage.reload()
 @app.route('/learnplus/home/<user_id>/unit', methods=["GET", "POST", "DELETE"])
 def unit(user_id):
     stmt = select(Learner.id).where(Learner.id == user_id)
-    rp = statement.query(stmt)
+    rp = storage.query(stmt)
     result = rp.first()
     if result is None:
         abort(404, "User Not found")
@@ -32,18 +32,31 @@ def unit(user_id):
         if len(result) == 0:
             #no content
             return make_response("No content", 204)
-        print(result)
-        return "list";
+        lis=[]
+        for _entry in result:
+            _entryd = {}
+            _entryd['course_name'] = _entry[0]
+            _entryd['progress'] = _entry[1]
+            lis.append(_entryd)
+        print(lis)
+        return make_response(jsonify(lis), 200)
+
     if (request.method == "POST"):
         #enroll -- asume use send correct details
-        new_unit = Enroll(**(request.get_json()))
+        info = request.get_json()
+        info['learnerId'] = user_id
+        new_unit = Enroll(**info)
         storage.new(new_unit)
         storage.save()
-        return make_response("enrolled", 201);
-    #otherwise -- user send correct registere unit
-    stmt = delete(Enroll).where(Enroll.learnedId == user_id)
+        return make_response(jsonify({201: "enrolled"}), 201);
+    #otherwise -assume- user send correct registered unit
+    units = request.get_json()
+    print(units)
+    for unit in units:
+        stmt = delete(Enroll).where(Enroll.unitId == unit)
+        storage.query(stmt)
+    storage.save()
     return make_response("Done", 200)
-
 
 #login page
 @app.route("/learnplus/home/login", methods=["GET"], strict_slashes=False)
@@ -91,8 +104,7 @@ def _entrys(results, typ=None):
             _entry['mentor'] = entry.mentor
         if typ is not None:
             _entry['pprogress'] = entry.pprogress
-
-        listings.append(_entry)
+        entries.append(_entry)
 
     return entries
 
@@ -111,7 +123,7 @@ def home(user_id=None):
     rp = storage.query(stmt2)
     username, imgURL = rp.first()
     #units offered
-    stmt = select(Unit)
+    stmt = select(Unit.id, Unit.name, Unit.mentor)
     all_units = storage.query(stmt).fetchall()
     all_units = _entrys(all_units) 
 
