@@ -7,7 +7,7 @@
 <h3>SET UP DATABASE AND DATABASE USER</h3>
 This is used by sqlalchemy in connection to database i hardcoded it in the code<br/>
 Run database.sql script in project directory<br/>
-<code>sudo mysql < databse.sql </code>
+<code>sudo mysql < databse.sql </code><br/>
 above code should create database and database user specified in the script<br/>
 tables and database schemy build by sqlalchemy</br>
 
@@ -55,24 +55,24 @@ use sudo/user having privileges on learnplus database(learnplus user created by 
 <code>sudo mysql learnplus;</code>
 <code>insert into units values("Unix networking", "jane", "001", NULL, NULL);</code>
 first try to get courses enrolled by user with<br>
-<code>curl http://localhost:8080/learnplus/home/{our user id we created}/unit</code>
+<code>curl http://localhost:8080/learnplus/home/{our user id we created}/unit</code><br/>
 should return No content 204<br/>
 now enroll user post request to same get api endpoint(dummy course above)<br/>
 <code>curl -X POST -H "Content-Type":"application/json" -d '{"unitId":"001"}' 
 localhost:8081/learnplus/home/<idreturned>/unit</code><br/>
 Above code should enroll user as taking course 001<br/>
 check it out by listing units is enrolled in<br/>
-<code>curl http://localhost:8080/learnplus/home/{user_id}/units</code>
+<code>curl http://localhost:8080/learnplus/home/{user_id}/units</code><br/>
 Should return list of dict course and progress<br/>
 </li>
 <li>
 <h3>UNIT DELETION</h3>
 demo user sends a delete request<br/>
 <code>curl -X DELETE -H "Content-Type":"application/json" -d '["001", "002"]' 
-http://localhost:8080/learnplus/home/{user_id}/unit</code>
+http://localhost:8080/learnplus/home/{user_id}/unit</code><br/>
 delete takes a list of course id to unenroll<br/>
 Check<br/>
-<code>curl http://localhost:8080/learnplus/home/{user_id}/units</code>
+<code>curl http://localhost:8080/learnplus/home/{user_id}/units</code><br/>
 should return Nothing<br/>
 </li>
 <div>OTHER API ON APP.PY FILE</div>
