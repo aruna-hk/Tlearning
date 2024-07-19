@@ -36,13 +36,13 @@ nginx proxy passes to 8081 -- redirection link shown on output
     <li>
         <h3>VISIT HOME PAGE</h3>
         <div>
-            follow the redirection link -- on redirection user password passed as query string cant be <br\>
-            in browsers search bae
+            follow the redirection link <br/> on redirection user password passed as query string can't be
+            in browsers search bar
         <div>
-         <code>
+         <code><br/>
               curl http://localhost:8081/learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a
-         </code>
+         </code><br/>
          above code should display user home screen
-     </li>
+     </li><br/>
     <div>OTHER API ON APP.PY FILE</div>
 </li>
