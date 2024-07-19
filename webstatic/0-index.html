@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Flashcards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .flashcard {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .flashcard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Flashcards</h1>
+
+    <div class="flashcard">
+        <img id="flashcard-img" src="page_1.png" alt="Flashcard Image">
+    </div>
+
+    <div class="button-container">
+        <button id="prev-btn" onclick="showPrev()">Previous</button>
+        <button id="next-btn" onclick="showNext()">Next</button>
+    </div>
+
+    <script>
+        // Array of image paths (you can fetch dynamically or hardcode)
+        const imagePaths = [
+            "/home/hk/hackathon/learningapp/webapp/unix/page_1.png",
+            "/home/hk/hackathon/learningapp/webapp/unix/page_2.png",
+            "/home/hk/hackathon/learningapp/webapp/unix/page_3.png",
+            "/home/hk/hackathon/learningapp/webapp/unix/page_4.png",
+            // Add more image paths as needed
+        ];
+
+        let currentIndex = 0;
+        const totalImages = imagePaths.length;
+
+        function showImage(index) {
+            const imgElement = document.getElementById('flashcard-img');
+            imgElement.src = imagePaths[index];
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+
+        // Initial display of the first image
+        showImage(currentIndex);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+.learning {
+  border: solid;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 auto;
+}
+.recent {
+  border: solid 1px green;
+}
+.loverview {
+  text-align: center;
+}
+.units {
+  border: solid 1px fuchsia;
+}
+.enrolled {
+  display: flex;
+  justify-content: center;
+  margin: 0
+}
+.upnext {
+  display: flex;
+  justify-content: center;
+}
+.enrolled li:hover, .upnext li:hover {
+  border:solid 1px green;
+  color: lightgreen;
+  font-style: italic;
+  border-radius: 5px;
+}
+#last:hover, #next:hover{
+  color: green;
+}

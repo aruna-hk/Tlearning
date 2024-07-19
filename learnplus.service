@@ -1,0 +1,12 @@
+[Unit]
+Description=Grocree WSGI
+After=network.target
+
+[Service]
+User=hk
+Group=hk
+WorkingDirectory=/home/hk/hackathon/Tlearning
+ExecStart=/usr/bin/gunicorn
+
+[Install]
+WantedBy=multi-user.target

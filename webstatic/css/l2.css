@@ -1,0 +1,18 @@
+.overview {
+  margin-top:3px;
+  border: solid 1px green;
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.courseslist {
+  display: flex;
+  justify-content: center;
+}
+.more {
+  text-align: right;
+  color: green;
+}
+.more span:hover {
+  border: solid 0.5px;
+}

@@ -1,0 +1,3 @@
+127.0.0.1 - - [19/Jul/2024:18:29:33 +0300] "GET /learnplus/home/login?username=hk&password=Aa48904890plmn HTTP/1.0" 401 105 "-" "curl/8.5.0"
+127.0.0.1 - - [19/Jul/2024:18:29:37 +0300] "GET /learnplus/home/login?username=hk&password=Aa48904890plmn$ HTTP/1.0" 302 333 "-" "curl/8.5.0"
+127.0.0.1 - - [19/Jul/2024:18:29:51 +0300] "GET /learnplus/home/0282337b-c4aa-4b39-a454-7f1f46ba1eae HTTP/1.1" 200 4735 "-" "curl/8.5.0"
