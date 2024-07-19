@@ -6,24 +6,24 @@
          <h2>COMMANDLINE</h2>
 <h3>SET UP THE SERVER</h3>
 clone the repository first<br/>
-start gunicorn server--make sure to change directorires in config files
-<code>sudo cp learnplus.service /etc/systemd/system</code>
-start the server
-<code>sudo service learnplus start</code>
+start gunicorn server--make sure to change directorires in config files<br/>
+<code>sudo cp learnplus.service /etc/systemd/system</code><br/>
+start the server<br/>
+<code>sudo service learnplus start</code><br/>
 setup web server nginx<br\>
 edit nginx.conf add the include /path/to/this/directory/\*.conf<br\>
 then run
-<code>sudo service nginx restart</code>
-server running at port 8080 -- nginx<br\>
-gunicorn 8081 <br\>
-nginx proxy passes to 8081 -- redirection link shown on outpu
+<code>sudo service nginx restart</code><br/>
+nginx server running at port 8080 -- nginx<br\>
+gunicorn at 8081 <br\>
+nginx proxy passes to 8081 -- redirection link shown on output
 <ol>
   <li>
       <h3>CREATE ACCOUNT</h3>
       <code> curl -X POST -H "Content-Type":"application/json" -d '{"name":"nice", "username":"nice", "email":"nice@gmail.com", 
            "phone":"778", "password":"Aa48904890plmn$"}' localhost:8080/learnplus/home/learners
-       </code>
-      <div> provides login link as return if sucessfule error if integrity issues occur in database</div>
+       </code><br/>
+      <div> provides login link as return if registration sucess error if integrity issues occur in database</div>
    </li>
    <li>
        <h3>LOGIN</h3>
