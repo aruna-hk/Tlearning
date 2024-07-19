@@ -75,4 +75,4 @@ Check<br/>
 <code>curl http://localhost:8080/learnplus/home/{user_id}/units</code><br/>
 should return Nothing<br/>
 </li>
-<div>OTHER API ON APP.PY FILE</div>
+<div>OTHER incomplete API's ON APP.PY FILE</div>
