@@ -89,9 +89,7 @@ def createac():
     new_learner = Learner(**(request.get_json()))
     storage.new(new_learner)
     storage.save()
-    login_url = url_for("login")+"?" + "username=<username>&password=<password>\n"
-    
-    return make_response("A/c created login with" + login_url, 201)
+    return redirect("http://localhost:8080/learnplus/home/login")
 
 #return dictionary listings
 def _entrys(results, typ=None):

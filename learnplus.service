@@ -6,7 +6,7 @@ After=network.target
 User=hk
 Group=hk
 WorkingDirectory=/home/hk/hackathon/Tlearning
-ExecStart=/usr/bin/gunicorn
+ExecStart=/usr/bin/gunicorn --log-level debug
 
 [Install]
 WantedBy=multi-user.target
