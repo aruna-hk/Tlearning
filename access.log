@@ -76,3 +76,5 @@
 127.0.0.1 - - [21/Jul/2024:18:09:22 +0300] "GET /learnplus/home/localhost:8080/images/user.png HTTP/1.0" 404 207 "http://localhost:8080/learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
 127.0.0.1 - - [21/Jul/2024:21:44:23 +0300] "GET /learnplus/home HTTP/1.0" 200 5110 "-" "curl/8.5.0"
 127.0.0.1 - - [21/Jul/2024:21:45:08 +0300] "GET /learnplus/home/ HTTP/1.0" 200 5110 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:127.0) Gecko/20100101 Firefox/127.0"
+127.0.0.1 - - [21/Jul/2024:21:46:26 +0300] "GET /learnplus/home HTTP/1.0" 200 5110 "-" "curl/8.5.0"
+127.0.0.1 - - [21/Jul/2024:21:47:07 +0300] "GET /learnplus/home/login?username=nic&password=Aa48904890plmn$ HTTP/1.0" 302 333 "-" "curl/8.5.0"

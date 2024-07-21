@@ -355,3 +355,7 @@
 [2024-07-21 21:44:23 +0300] [9277] [DEBUG] Closing connection. 
 [2024-07-21 21:45:07 +0300] [9277] [DEBUG] GET /learnplus/home/
 [2024-07-21 21:45:08 +0300] [9277] [DEBUG] Closing connection. 
+[2024-07-21 21:46:26 +0300] [9277] [DEBUG] GET /learnplus/home
+[2024-07-21 21:46:26 +0300] [9277] [DEBUG] Closing connection. 
+[2024-07-21 21:47:07 +0300] [9277] [DEBUG] GET /learnplus/home/login
+[2024-07-21 21:47:07 +0300] [9277] [DEBUG] Closing connection. 
