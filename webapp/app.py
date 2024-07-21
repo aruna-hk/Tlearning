@@ -69,7 +69,6 @@ def login():
           _user['username'] = request.args.get("username")
           url = url_for('home', user_id=_auth[2])
           url = "http://localhost:8080" + url
-          print(url)
           return redirect(url)
       else:
           abort(401, "unauthorized")
@@ -178,32 +177,19 @@ def home(user_id=None):
 #without user~~~landing
 @app.route('/learnplus/home/', strict_slashes=False)
 def home_2():
-    all_unit_stmt = select(Unit.id, Unit.name)
-    results = storage.query(all_unit_stmt).fetchall()
-    units_list = []
-    for unit in results:
-        _unit = {}
-        _unit['id'] = unit.id
-        _unit['name'] = unit.name
-        units_list.append(_unit)
-
     return home()
-    #return render_template("index.htm", all=units_list)
 
 #update unit progress
 #on get-- get next page/section progress update
 #on post
-@app.route("/learnplus/home/<user_id>/<unit_id>/update", methods=["GET", "POST"])
+@app.route("/learnplus/home/<user_id>/<unit_id>/update")
 def update(user_id, unit_id):
-    if request.method == "GET":
-        stmt = select(Enroll.pprogress).where(and_(Enroll.learnerId == user_id, Enroll.unitId == unit_id))
-        result = storage.query(stmt).first()
-        print(result)
-        update_stmt = update(Enroll.__tablename__).where(Enroll.unitId==unit_id).values(pprogress = 1)
-        print(stmt)
-        return "next topic"
+    #if request.method == "GET":
+        #stmt = select(Enroll.pprogress).where(and_(Enroll.learnerId == user_id, Enroll.unitId == unit_id))
+        #result = storage.query(stmt)
+        #update_stmt = update(Enroll.__tablename__).where(Enroll.unitId==unit_id).values(pprogress = 1)
+        #return "next topic"
     return "updating progress info"
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
