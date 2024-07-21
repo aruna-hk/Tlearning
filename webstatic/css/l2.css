@@ -1,7 +1,6 @@
 .overview {
   margin-top:3px;
   border: solid 1px green;
-  height: 300px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }

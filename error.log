@@ -1,8 +1,4 @@
-
-[2024-07-19 23:56:39 +0300] [7591] [INFO] Handling signal: term
-[2024-07-19 23:56:40 +0300] [7594] [INFO] Worker exiting (pid: 7594)
-[2024-07-19 23:56:40 +0300] [7591] [INFO] Shutting down: Master
-[2024-07-19 23:56:41 +0300] [7625] [DEBUG] Current configuration:
+[2024-07-21 17:14:54 +0300] [8472] [DEBUG] Current configuration:
   config: ./gunicorn.conf.py
   wsgi_app: webapp.app:app
   bind: ['127.0.0.1:8081']
@@ -61,21 +57,21 @@
   default_proc_name: gunicorn
   pythonpath: None
   paste: None
-  on_starting: <function OnStarting.on_starting at 0x76cc5b276480>
-  on_reload: <function OnReload.on_reload at 0x76cc5b2765c0>
-  when_ready: <function WhenReady.when_ready at 0x76cc5b276700>
-  pre_fork: <function Prefork.pre_fork at 0x76cc5b2768e0>
-  post_fork: <function Postfork.post_fork at 0x76cc5b276a20>
-  post_worker_init: <function PostWorkerInit.post_worker_init at 0x76cc5b276b60>
-  worker_int: <function WorkerInt.worker_int at 0x76cc5b276ca0>
-  worker_abort: <function WorkerAbort.worker_abort at 0x76cc5b276de0>
-  pre_exec: <function PreExec.pre_exec at 0x76cc5b276f20>
-  pre_request: <function PreRequest.pre_request at 0x76cc5b277060>
-  post_request: <function PostRequest.post_request at 0x76cc5b277100>
-  child_exit: <function ChildExit.child_exit at 0x76cc5b277240>
-  worker_exit: <function WorkerExit.worker_exit at 0x76cc5b277380>
-  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x76cc5b2774c0>
-  on_exit: <function OnExit.on_exit at 0x76cc5b277600>
+  on_starting: <function OnStarting.on_starting at 0x78d0ce15e480>
+  on_reload: <function OnReload.on_reload at 0x78d0ce15e5c0>
+  when_ready: <function WhenReady.when_ready at 0x78d0ce15e700>
+  pre_fork: <function Prefork.pre_fork at 0x78d0ce15e8e0>
+  post_fork: <function Postfork.post_fork at 0x78d0ce15ea20>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x78d0ce15eb60>
+  worker_int: <function WorkerInt.worker_int at 0x78d0ce15eca0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x78d0ce15ede0>
+  pre_exec: <function PreExec.pre_exec at 0x78d0ce15ef20>
+  pre_request: <function PreRequest.pre_request at 0x78d0ce15f060>
+  post_request: <function PostRequest.post_request at 0x78d0ce15f100>
+  child_exit: <function ChildExit.child_exit at 0x78d0ce15f240>
+  worker_exit: <function WorkerExit.worker_exit at 0x78d0ce15f380>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x78d0ce15f4c0>
+  on_exit: <function OnExit.on_exit at 0x78d0ce15f600>
   proxy_protocol: False
   proxy_allow_ips: ['127.0.0.1']
   keyfile: None
@@ -88,23 +84,42 @@
   ciphers: None
   raw_paste_global_conf: []
   strip_header_spaces: False
-[2024-07-19 23:56:41 +0300] [7625] [INFO] Starting gunicorn 20.1.0
-[2024-07-19 23:56:41 +0300] [7625] [DEBUG] Arbiter booted
-[2024-07-19 23:56:41 +0300] [7625] [INFO] Listening at: http://127.0.0.1:8081 (7625)
-[2024-07-19 23:56:41 +0300] [7625] [INFO] Using worker: eventlet
-[2024-07-19 23:56:41 +0300] [7626] [INFO] Booting worker with pid: 7626
-[2024-07-19 23:56:41 +0300] [7625] [DEBUG] 1 workers
-[2024-07-19 23:57:17 +0300] [7626] [DEBUG] GET /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a
-[2024-07-19 23:57:17 +0300] [7626] [DEBUG] Closing connection. 
-[2024-07-19 23:57:44 +0300] [7626] [DEBUG] GET /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a/unit
-[2024-07-19 23:57:44 +0300] [7626] [DEBUG] Closing connection. 
-[2024-07-20 00:04:59 +0300] [7626] [DEBUG] Invalid request from ip=127.0.0.1: Invalid HTTP header name: 'CONTENT TYPE'
-[2024-07-20 00:06:18 +0300] [7626] [DEBUG] POST /learnplus/home/learners
-[2024-07-20 00:06:18 +0300] [7626] [DEBUG] Closing connection. 
-[2024-07-20 00:09:03 +0300] [7625] [INFO] Handling signal: term
-[2024-07-20 00:09:03 +0300] [7626] [INFO] Worker exiting (pid: 7626)
-[2024-07-20 00:09:03 +0300] [7625] [INFO] Shutting down: Master
-[2024-07-20 00:09:04 +0300] [8051] [DEBUG] Current configuration:
+[2024-07-21 17:14:54 +0300] [8472] [INFO] Starting gunicorn 20.1.0
+[2024-07-21 17:14:54 +0300] [8472] [DEBUG] Arbiter booted
+[2024-07-21 17:14:54 +0300] [8472] [INFO] Listening at: http://127.0.0.1:8081 (8472)
+[2024-07-21 17:14:54 +0300] [8472] [INFO] Using worker: eventlet
+[2024-07-21 17:14:54 +0300] [8473] [INFO] Booting worker with pid: 8473
+[2024-07-21 17:14:54 +0300] [8472] [DEBUG] 1 workers
+[2024-07-21 17:15:04 +0300] [8473] [DEBUG] GET /learnplus/home/
+[2024-07-21 17:15:05 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:15:51 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:15:51 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:16:05 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:16:05 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:18:41 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:18:41 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:19:50 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:19:50 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:23:45 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:23:45 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:23:58 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:23:58 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:27:15 +0300] [8473] [DEBUG] GET /learnplus/home/
+[2024-07-21 17:27:15 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:28:22 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:28:22 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:28:22 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:28:22 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:28:28 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:28:28 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:28:28 +0300] [8473] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:28:28 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:29:19 +0300] [8473] [DEBUG] GET /learnplus/home/
+[2024-07-21 17:29:19 +0300] [8473] [DEBUG] Closing connection. 
+[2024-07-21 17:32:55 +0300] [8472] [INFO] Handling signal: term
+[2024-07-21 17:32:56 +0300] [8473] [INFO] Worker exiting (pid: 8473)
+[2024-07-21 17:32:56 +0300] [8472] [INFO] Shutting down: Master
+[2024-07-21 17:32:57 +0300] [9055] [DEBUG] Current configuration:
   config: ./gunicorn.conf.py
   wsgi_app: webapp.app:app
   bind: ['127.0.0.1:8081']
@@ -163,21 +178,21 @@
   default_proc_name: gunicorn
   pythonpath: None
   paste: None
-  on_starting: <function OnStarting.on_starting at 0x72ec4dd5e480>
-  on_reload: <function OnReload.on_reload at 0x72ec4dd5e5c0>
-  when_ready: <function WhenReady.when_ready at 0x72ec4dd5e700>
-  pre_fork: <function Prefork.pre_fork at 0x72ec4dd5e8e0>
-  post_fork: <function Postfork.post_fork at 0x72ec4dd5ea20>
-  post_worker_init: <function PostWorkerInit.post_worker_init at 0x72ec4dd5eb60>
-  worker_int: <function WorkerInt.worker_int at 0x72ec4dd5eca0>
-  worker_abort: <function WorkerAbort.worker_abort at 0x72ec4dd5ede0>
-  pre_exec: <function PreExec.pre_exec at 0x72ec4dd5ef20>
-  pre_request: <function PreRequest.pre_request at 0x72ec4dd5f060>
-  post_request: <function PostRequest.post_request at 0x72ec4dd5f100>
-  child_exit: <function ChildExit.child_exit at 0x72ec4dd5f240>
-  worker_exit: <function WorkerExit.worker_exit at 0x72ec4dd5f380>
-  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x72ec4dd5f4c0>
-  on_exit: <function OnExit.on_exit at 0x72ec4dd5f600>
+  on_starting: <function OnStarting.on_starting at 0x700325832480>
+  on_reload: <function OnReload.on_reload at 0x7003258325c0>
+  when_ready: <function WhenReady.when_ready at 0x700325832700>
+  pre_fork: <function Prefork.pre_fork at 0x7003258328e0>
+  post_fork: <function Postfork.post_fork at 0x700325832a20>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x700325832b60>
+  worker_int: <function WorkerInt.worker_int at 0x700325832ca0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x700325832de0>
+  pre_exec: <function PreExec.pre_exec at 0x700325832f20>
+  pre_request: <function PreRequest.pre_request at 0x700325833060>
+  post_request: <function PostRequest.post_request at 0x700325833100>
+  child_exit: <function ChildExit.child_exit at 0x700325833240>
+  worker_exit: <function WorkerExit.worker_exit at 0x700325833380>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7003258334c0>
+  on_exit: <function OnExit.on_exit at 0x700325833600>
   proxy_protocol: False
   proxy_allow_ips: ['127.0.0.1']
   keyfile: None
@@ -190,82 +205,153 @@
   ciphers: None
   raw_paste_global_conf: []
   strip_header_spaces: False
-[2024-07-20 00:09:04 +0300] [8051] [INFO] Starting gunicorn 20.1.0
-[2024-07-20 00:09:04 +0300] [8051] [DEBUG] Arbiter booted
-[2024-07-20 00:09:04 +0300] [8051] [INFO] Listening at: http://127.0.0.1:8081 (8051)
-[2024-07-20 00:09:04 +0300] [8051] [INFO] Using worker: eventlet
-[2024-07-20 00:09:04 +0300] [8053] [INFO] Booting worker with pid: 8053
-[2024-07-20 00:09:04 +0300] [8051] [DEBUG] 1 workers
-[2024-07-20 00:09:11 +0300] [8053] [DEBUG] POST /learnplus/home/learners
-[2024-07-20 00:09:11 +0300] [8053] [DEBUG] Closing connection. 
-[2024-07-20 00:10:14 +0300] [8053] [DEBUG] GET /learnplus/home/login
-[2024-07-20 00:10:14 +0300] [8053] [DEBUG] Closing connection. 
-[2024-07-20 00:13:02 +0300] [8053] [DEBUG] GET /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a
-[2024-07-20 00:13:02,931] ERROR in app: Exception on /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask_cors/extension.py", line 178, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hk/hackathon/Tlearning/webapp/app.py", line 122, in home
-    username, imgURL = rp.first()
-    ^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-[2024-07-20 00:13:02 +0300] [8053] [DEBUG] Closing connection. 
-[2024-07-20 00:13:09 +0300] [8053] [DEBUG] GET /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a
-[2024-07-20 00:13:09,357] ERROR in app: Exception on /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask_cors/extension.py", line 178, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hk/hackathon/Tlearning/webapp/app.py", line 122, in home
-    username, imgURL = rp.first()
-    ^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-[2024-07-20 00:13:09 +0300] [8053] [DEBUG] Closing connection. 
-[2024-07-20 00:13:14 +0300] [8053] [DEBUG] GET /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a
-[2024-07-20 00:13:14,644] ERROR in app: Exception on /learnplus/home/32677c8e-25b3-45c2-bd50-5e2b6ef3339a [GET]
-Traceback (most recent call last):
-  File "/usr/lib/python3.12/flask/app.py", line 1473, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 882, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask_cors/extension.py", line 178, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-                                                ^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 880, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/usr/lib/python3.12/flask/app.py", line 865, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/hk/hackathon/Tlearning/webapp/app.py", line 122, in home
-    username, imgURL = rp.first()
-    ^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-[2024-07-20 00:13:14 +0300] [8053] [DEBUG] Closing connection. 
+[2024-07-21 17:32:57 +0300] [9055] [INFO] Starting gunicorn 20.1.0
+[2024-07-21 17:32:57 +0300] [9055] [DEBUG] Arbiter booted
+[2024-07-21 17:32:57 +0300] [9055] [INFO] Listening at: http://127.0.0.1:8081 (9055)
+[2024-07-21 17:32:57 +0300] [9055] [INFO] Using worker: eventlet
+[2024-07-21 17:32:57 +0300] [9057] [INFO] Booting worker with pid: 9057
+[2024-07-21 17:32:57 +0300] [9055] [DEBUG] 1 workers
+[2024-07-21 17:33:36 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:36 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:36 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:36 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:38 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:39 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:39 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:39 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:39 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:46 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:46 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:33:46 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:33:46 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:43:45 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:43:45 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:43:45 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:43:45 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:43:52 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:43:52 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:44:04 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:44:04 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:44:04 +0300] [9057] [DEBUG] GET /learnplus/home/localhost:8080/images/user.png
+[2024-07-21 17:44:04 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:44:22 +0300] [9057] [DEBUG] GET /learnplus/home/
+[2024-07-21 17:44:22 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:53:14 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:53:14 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:53:36 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:53:36 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:53:48 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:53:48 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 17:55:07 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 17:55:07 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 18:04:07 +0300] [9057] [DEBUG] GET /learnplus/home/
+[2024-07-21 18:04:07 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 18:08:52 +0300] [9057] [DEBUG] GET /learnplus/home/
+[2024-07-21 18:08:52 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 18:09:22 +0300] [9057] [DEBUG] GET /learnplus/home/56788893-51ab-418e-bc9e-f0df67a03536
+[2024-07-21 18:09:22 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 18:09:22 +0300] [9057] [DEBUG] GET /learnplus/home/localhost:8080/images/user.png
+[2024-07-21 18:09:22 +0300] [9057] [DEBUG] Closing connection. 
+[2024-07-21 21:43:57 +0300] [9276] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: webapp.app:app
+  bind: ['127.0.0.1:8081']
+  backlog: 2048
+  workers: 1
+  worker_class: eventlet
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/hk/hackathon/Tlearning
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: access.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: error.log
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x746220c32480>
+  on_reload: <function OnReload.on_reload at 0x746220c325c0>
+  when_ready: <function WhenReady.when_ready at 0x746220c32700>
+  pre_fork: <function Prefork.pre_fork at 0x746220c328e0>
+  post_fork: <function Postfork.post_fork at 0x746220c32a20>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x746220c32b60>
+  worker_int: <function WorkerInt.worker_int at 0x746220c32ca0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x746220c32de0>
+  pre_exec: <function PreExec.pre_exec at 0x746220c32f20>
+  pre_request: <function PreRequest.pre_request at 0x746220c33060>
+  post_request: <function PostRequest.post_request at 0x746220c33100>
+  child_exit: <function ChildExit.child_exit at 0x746220c33240>
+  worker_exit: <function WorkerExit.worker_exit at 0x746220c33380>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x746220c334c0>
+  on_exit: <function OnExit.on_exit at 0x746220c33600>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-07-21 21:43:57 +0300] [9276] [INFO] Starting gunicorn 20.1.0
+[2024-07-21 21:43:57 +0300] [9276] [DEBUG] Arbiter booted
+[2024-07-21 21:43:57 +0300] [9276] [INFO] Listening at: http://127.0.0.1:8081 (9276)
+[2024-07-21 21:43:57 +0300] [9276] [INFO] Using worker: eventlet
+[2024-07-21 21:43:57 +0300] [9277] [INFO] Booting worker with pid: 9277
+[2024-07-21 21:43:57 +0300] [9276] [DEBUG] 1 workers
+[2024-07-21 21:44:23 +0300] [9277] [DEBUG] GET /learnplus/home
+[2024-07-21 21:44:23 +0300] [9277] [DEBUG] Closing connection. 
+[2024-07-21 21:45:07 +0300] [9277] [DEBUG] GET /learnplus/home/
+[2024-07-21 21:45:08 +0300] [9277] [DEBUG] Closing connection. 

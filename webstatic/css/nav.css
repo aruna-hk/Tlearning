@@ -3,7 +3,6 @@ nav {
   border: solid 1px green;
   border-radius: 10px;
   top:0;
-  max-height: 45px;
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr 1fr  1fr 1fr;
@@ -45,6 +44,7 @@ nav {
 }
 .username:hover {
   color: green;
+  text-decoration: underline;
 }
 .usrimg:hover {
   border: solid green;

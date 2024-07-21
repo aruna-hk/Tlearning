@@ -1,86 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Flashcards</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .flashcard {
-            width: 400px;
-            height: 300px;
-            border: 1px solid #ccc;
-            margin: 20px auto;
-            position: relative;
-            overflow: hidden;
-        }
-        .flashcard img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .button-container {
-            margin-top: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin: 0 10px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Image Flashcards</h1>
+<!doctype html>
+<html lang=en>
+   <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        <meta name="URl" content="www.grocree.com">
+        <meta name="Author" content="hk">
+        <link rel=stylesheet href=css/nav.css></link> 
+        <link rel=stylesheet href=css/learnarea.css></link> 
+        <link rel=stylesheet href=css/l2.css></link> 
+        <link rel=stylesheet href=css/titles.css></link>
+        <link rel=stylesheet href=css/h.css></link>
+        <link rel=stylesheet href=css/signup.css></link>
+        <link rel=stylesheet href=css/login.css></link>
+    </head>
+    <body> 
+    <div class="login">
+        <form id="logform">
+            <div id="inptfields">
+                <label for="usernme">Username: </label>
+                <input type="text" id="usernme" placeholder="username">
+                <label for="password">Password: </label>
+                <input type="password" id="password">
+             </div>
+             <div id="submitregister">
+                <div id="forget">
+                   Reset passwd?
+                </div>
+                <input type="button" value="REGISTER" id="register">
+                or
+                <input type="button" value="LOGIN" id="login">
+             </div>
+             <div id="cancel">
+                 <div>
+                     <button>&lt;&lt; back</button>
+                 </div>
+              </div>
+        </form>
+      </div>
+       <div class="create" id="signup">
+            <form id="createAc" submit="http://localhost" method="post">
+                <div id="inptfields">
+                  <input type="text" placeholder="name" name="name" id="rname">
+                  <input name="phone" type="text" placeholder="phone" id="rphone">
+                  <input type="text" placeholder="email" name="email" id="remail">
+                  <input type="text" placeholder="username" name="username" id="rusername">
+                  <input type="password" placeholder="password" name="password" id="rpassword">
+                </div>
+                <div class="cregister">
+                  <button type="button" value="REGISTER" id="ccancel">cancel</button>
+                  <button type="button" value="REGISTER" id="cregister">REGiSTER</button>
+                </div>
+            </form>
+        </div>
+        <nav id=header>
+            <div id="logo">LearnPlus</div>
+            <div></div>
+            <div class=avunits><a href=#avunits>units</a></div>
+            <div class=learningp><a href=#learnings>learning <br/>progress</a></div>
+   	    <div class=user id=''>
+                <div class=username>Username</div>
+                <img class=usrimg alt="user profile" src=images/me.jpg>
+            </div>
+        </nav>
+       <section class=learning id=learnings>
+           <div class=recent>
+               <h2>Learning progress</h2>
+               <div class="loverview">
+                   <div class=title> Overview </div>
+                   <div id=ds> 
+                     <span>Day streaks:</span>
+                     <span>4</span>
+                   </div>
+                   <div id=last>
+                     <div>Last unit studied:</div>
+                     <div>Unix network programming</div>
+                    </div>
+                   <div id=next>
+                      <div>Next scheduled activity:</div>
+                      <span>Unit name </span>
+                      <span>Time</span>
+                   </div>
+               </div>
+               <h3>Enrolled units</h3>
+               <div class=enrolled>
+               <ul>
+                   <li>
+                       <div>Unix network programming</div>
+                       <div>
+                        --------------------------------
+                       </div>
+                   </li>
+                   <li>
+                       <div>Unix network programming</div>
+                       <div>------------------------</div>
+                   </li>
+                   <li>
+                       <div>Unix network programming</div>
+                       <div>------------------------</div>
+                   </li>
+                   <li>
+                       <div>Unix network programming</div>
+                       <div>------------------------</div>
+                   </li>
+                   <li>
+                       <div>Unix network programming</div>
+                       <div>------------------------</div>
+                   </li>
+               </ul>
+              </div>
+           </div>
+           <div class=units>
+               <h2> Upcoming activities</h2>
+               <div class=upnext>
+               <ul>
+                  <li>
+                      <div class=type>Assessment</div>
+                      <div> Unix network programming</div>
+                      <div>Time</div>
+                  </li>
+                  <li>
+                      <div class=type>Assessment</div>
+                      <div> Unix network programming</div>
+                      <div>Time</div>
+                  </li>
+                  <li>
+                      <div class=type>Assessment</div>
+                      <div> Unix network programming</div>
+                      <div>Time</div>
+                  </li>
+                  <li>
+                      <div class=type>Assessment</div>
+                      <div> Unix network programming</div>
+                      <div>Time</div>
+                  </li>
 
-    <div class="flashcard">
-        <img id="flashcard-img" src="page_1.png" alt="Flashcard Image">
-    </div>
-
-    <div class="button-container">
-        <button id="prev-btn" onclick="showPrev()">Previous</button>
-        <button id="next-btn" onclick="showNext()">Next</button>
-    </div>
-
-    <script>
-        // Array of image paths (you can fetch dynamically or hardcode)
-        const imagePaths = [
-            "/home/hk/hackathon/learningapp/webapp/unix/page_1.png",
-            "/home/hk/hackathon/learningapp/webapp/unix/page_2.png",
-            "/home/hk/hackathon/learningapp/webapp/unix/page_3.png",
-            "/home/hk/hackathon/learningapp/webapp/unix/page_4.png",
-            // Add more image paths as needed
-        ];
-
-        let currentIndex = 0;
-        const totalImages = imagePaths.length;
-
-        function showImage(index) {
-            const imgElement = document.getElementById('flashcard-img');
-            imgElement.src = imagePaths[index];
-        }
-
-        function showNext() {
-            currentIndex = (currentIndex + 1) % totalImages;
-            showImage(currentIndex);
-        }
-
-        function showPrev() {
-            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-            showImage(currentIndex);
-        }
-
-        // Initial display of the first image
-        showImage(currentIndex);
-    </script>
-</body>
+               </ul>
+               </div>
+           </div>
+       </section>
+       <section class=overview>
+           <div class="enroll" id=avunits>
+               <h2>All courses</h2>
+               <div class=courseslist>
+                   <div>
+                   <ul>
+                       <li> Database management systems</li>
+                       <li> Database management systems</li>
+                       <li> Database management systems</li>
+                       <li> Database management systems</li>
+                       <li> Database management systems</li>
+                       <li> Database management systems</li>
+                   </li>
+                   <div class=more><span>more units...</span></div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <footer id=webf>
+           <address>
+               <ul>
+                    <li>
+                        <a href=mailto:kiptooharon.hk@gmail.com>Email kiptooharon.hk@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href=tel:0714261231>Call 0714261231</a>
+                    </li>
+               <ul>
+           </address>
+    </body>
+    <script src=js/login.js></script>
+    <script src=js/signup.js></script>
 </html>
-

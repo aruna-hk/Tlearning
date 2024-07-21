@@ -1,17 +1,15 @@
 <!doctype html>
-<html lang=en>
-   <head>
+<html lang="en"><head>
         <meta name="viewport" content="width=device-width">
         <meta charset="utf-8">
-        <meta name="URl" content="www.grocree.com">
         <meta name="Author" content="hk">
-        <link rel=stylesheet href=css/nav.css></link> 
-        <link rel=stylesheet href=css/learnarea.css></link> 
-        <link rel=stylesheet href=css/l2.css></link> 
-        <link rel=stylesheet href=css/titles.css></link>
-        <link rel=stylesheet href=css/h.css></link>
-        <link rel=stylesheet href=css/signup.css></link>
-        <link rel=stylesheet href=css/login.css></link>
+        <link rel="stylesheet" href="http://localhost:8080/css/nav.css"> 
+        <link rel="stylesheet" href="http://localhost:8080/css/learnarea.css"> 
+        <link rel="stylesheet" href="http://localhost:8080/css/l2.css"> 
+        <link rel="stylesheet" href="http://localhost:8080/css/titles.css">
+        <link rel="stylesheet" href="http://localhost:8080/css/h.css">
+        <link rel="stylesheet" href="http://localhost:8080/css/signup.css">
+        <link rel="stylesheet" href="http://localhost:8080/css/login.css">
     </head>
     <body> 
     <div class="login">
@@ -38,7 +36,7 @@
         </form>
       </div>
        <div class="create" id="signup">
-            <form id="createAc" submit="http://localhost" method="post">
+            <form id="createAc" submit="http://localhost:5000" method="post">
                 <div id="inptfields">
                   <input type="text" placeholder="name" name="name" id="rname">
                   <input name="phone" type="text" placeholder="phone" id="rphone">
@@ -52,21 +50,21 @@
                 </div>
             </form>
         </div>
-        <nav id=header>
+        <nav id="header">
             <div id="logo">LearnPlus</div>
             <div></div>
-            <div class=avunits><a href=#avunits>units</a></div>
-            <div class=learningp><a href=#learnings>learning <br/>progress</a></div>
-   	    <div class=user id=''>
-                <div class=username>{{username}}</div>
-                <img class=usrimg alt="user profile" src={{imgURL}}>
+            <div class="avunits"><a href="#avunits">units</a></div>
+            <div class="learningp"><a href="#learnings">learning <br>progress</a></div>
+   	    <div class="user" id="">
+                <div class="username">login/register</div>
+                <img class="usrimg" alt="user profile" src="http://localhost:8080/images/me.jpg">
             </div>
         </nav>
-       <section class=learning id=learnings>
-           <div class=recent>
+       <section class="learning" id="learnings">
+           <div class="recent">
                <h2>Learning progress</h2>
                <div class="loverview">
-                   <div class=title> Overview </div>
+                   <div class="title"> Overview </div>
                    <div id=ds> 
                      <span>Day streaks:</span>
                      <span>4</span>
@@ -74,69 +72,54 @@
                    <div id=last>
                      <div>Last unit studied:</div>
                      <div>{{lastStudied}}</div>
-                    </div>
+                   </div>
                    <div id=next>
                       <div>Next scheduled activity:</div>
-                      <span>{{scheduled.name}}</span>
-                      <span>{{scheduled.Time}}</span>
+                      <span>Unit:{{scheduled.name}}</span><br>
+                      <span>Time:{{scheduled.Time}}</span>
                    </div>
                </div>
-               <h3>Enrolled units</h3>
-               <div class=enrolled>
-               <ul>
-                 {% for eu in enrolled %} 
-                   <li id={{eu.id}}>
-                       <div>{{eu.name}}</div>
-                       <div>
-                        {{eu.pprogress}}
-                       </div>
-                   </li>
-                  {% endfor %}
-               </ul>
-              </div>
-           </div>
-           <div class=units>
+                  <h3>Enrolled units</h3>
+                  <div class="enrolled"> 
+                     <a>No record login</a>
+                  </div>
+            </div>
+           <div class="units">
                <h2> Upcoming activities</h2>
-               <div class=upnext>
-               <ul>
-                 {% for sa in enrolled %}
-                  <li>
-                      <div class=type>{{sa.type}}</div>
-                      <div> {{sa.name}}</div>
-                      <div>{{sa.time}}</div>
-                  </li>
-                 {% endfor %}
-               </ul>
+               <div class="upnext">
+                  <a>No record login</a>
                </div>
            </div>
        </section>
-       <section class=overview>
-           <div class="enroll" id=avunits>
+       <section class="overview">
+           <div class="enroll" id="avunits">
                <h2>All courses</h2>
-               <div class=courseslist>
+               <div class="courseslist">
                    <div>
-                   <ul>
-                      {% for un in all %}} 
-                       <li>{{un.name}}</li>
-                      {% endfor %}
-                   </li>
-                   <div class=more><span>more units...</span></div>
-                   </div>
+                       <ul>
+                           {% for unit in all %}
+                           <li id={{unit.id}}> {{unit.name}}</li>
+                           {% endfor %}
+                           <div class="more"><span>more units...</span></div>
+                       </ul>
+                  </div>
                </div>
            </div>
        </section>
-       <footer id=webf>
+       <footer id="webf">
            <address>
                <ul>
                     <li>
-                        <a href=mailto:kiptooharon.hk@gmail.com>Email kiptooharon.hk@gmail.com</a>
+                        <a href="mailto:kiptooharon.hk@gmail.com">Email kiptooharon.hk@gmail.com</a>
                     </li>
                     <li>
-                        <a href=tel:0714261231>Call 0714261231</a>
+                        <a href="tel:0714261231">Call 0714261231</a>
                     </li>
                <ul>
-           </address>
-    </body>
-    <script src=js/login.js></script>
-    <script src=js/signup.js></script>
-</html>
+           </ul></ul></address>
+    
+    <script src="http://localhost:8080/js/login.js"></script>
+    <script src="http://localhost:8080/js/signup.js"></script>
+
+</footer>
+</body></html>

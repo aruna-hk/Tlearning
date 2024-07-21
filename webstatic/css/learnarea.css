@@ -1,5 +1,4 @@
 .learning {
-  border: solid;
   display: grid;
   grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
   margin: 0 auto;
@@ -30,4 +29,11 @@
 }
 #last:hover, #next:hover{
   color: green;
+}
+a {
+  color: green;
+  text-decoration: underline;
+}
+a:hover {
+  
 }

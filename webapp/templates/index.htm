@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang=en>
+   <head>
+        <meta name="viewport" content="width=device-width">
+        <meta charset="utf-8">
+        <meta name="Author" content="hk">
+        <link rel=stylesheet href=http://localhost:8080/css/nav.css></link> 
+        <link rel=stylesheet href=http://localhost:8080/css/learnarea.css></link> 
+        <link rel=stylesheet href=http://localhost:8080/css/l2.css></link> 
+        <link rel=stylesheet href=http://localhost:8080/css/titles.css></link>
+        <link rel=stylesheet href=http://localhost:8080/css/h.css></link>
+        <link rel=stylesheet href=http://localhost:8080/css/signup.css></link>
+        <link rel=stylesheet href=http://localhost:8080/css/login.css></link>
+    </head>
+    <body> 
+        <nav id=header>
+            <div id="logo">LearnPlus</div>
+            <div></div>
+            <div class=avunits><a href=#avunits>units</a></div>
+            <div class=learningp><a href=#learnings>learning <br/>progress</a></div>
+   	    <div class=user id=''>
+                <div class=username>{{username}}</div>
+                <img class=usrimg alt="user profile" src=http:localhost:8080/images/{{imgURL}}>
+            </div>
+        </nav>
+       <section class=learning id=learnings>
+           <div class=recent>
+               <h2>Learning progress</h2>
+               <div class="loverview">
+                   <div class=title> Overview </div>
+                   <div id=ds> 
+                     <span>Day streaks:</span>
+                     <span>4</span>
+                   </div>
+                   <div id=last>
+                     <div>Last unit studied:</div>
+                     <div>{{lastStudied}}</div>
+                    </div>
+                   <div id=next>
+                      <div>Next scheduled activity:</div>
+                      <span>Unit:{{scheduled.name}}</span><br>
+                      <span>Time:{{scheduled.Time}}</span>
+                   </div>
+               </div>
+               <h3>Enrolled units</h3>
+               <div class=enrolled>
+               <ul>
+                 {% for eu in enrolled %} 
+                   <li id={{eu.id}}>
+                       <div>{{eu.name}}</div>
+                       <div>
+                        {{eu.pprogress}}
+                       </div>
+                   </li>
+                  {% endfor %}
+               </ul>
+              </div>
+           </div>
+           <div class=units>
+               <h2> Upcoming activities</h2>
+               <div class=upnext>
+               <ul>
+                 {% for sa in schedule %}
+                  <li id={{sa.id}}>
+                      <div> {{sa.name}}</div>
+                      <div>{{sa.time}}</div>
+                  </li>
+                 {% endfor %}
+               </ul>
+               </div>
+           </div>
+       </section>
+       <section class=overview>
+           <div class="enroll" id=avunits>
+               <h2>All courses</h2>
+               <div class=courseslist>
+                   <div>
+                   <ul>
+                      {% for allun in all %} 
+                       <li id={{allun.id}}>
+                            <div>{{allun.name}}</div>
+                            <div>Mentor:{{allun.mentor}}</div>
+                       </li>
+                      {% endfor %}
+                   </li>
+                   <div class=more><span>more units...</span></div>
+                   </div>
+               </div>
+           </div>
+       </section>
+       <footer id=webf>
+           <address>
+               <ul>
+                    <li>
+                        <a href=mailto:kiptooharon.hk@gmail.com>Email kiptooharon.hk@gmail.com</a>
+                    </li>
+                    <li>
+                        <a href=tel:0714261231>Call 0714261231</a>
+                    </li>
+               <ul>
+           </address>
+    </body>
+    <script src=http://localhost:8080/js/empty.js></script>
+</html>
