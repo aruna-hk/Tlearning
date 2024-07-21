@@ -52,14 +52,14 @@ above code should display user home screen
 <h3>UNIT ENROLLMENT</h3>
 First create dummy unit/s<br\>
 use sudo/user having privileges on learnplus database(learnplus user created by .sql file with password check)<br/>
-<code>sudo mysql learnplus;</code>
-<code>insert into units values("Unix networking", "jane", "001", NULL, NULL);</code>
+<code>sudo mysql learnplus;</code><br/>
+<code> > insert into units values("Unix networking", "jane", "001", NULL, NULL);</code>
 first try to get courses enrolled by user with<br>
 <code>curl http://localhost:8080/learnplus/home/{our user id we created}/unit</code><br/>
 should return No content 204<br/>
 now enroll user post request to same get api endpoint(dummy course above)<br/>
 <code>curl -X POST -H "Content-Type":"application/json" -d '{"unitId":"001"}' 
-localhost:8081/learnplus/home/<idreturned>/unit</code><br/>
+localhost:8081/learnplus/home/{idreturned}/unit</code><br/>
 Above code should enroll user as taking course 001<br/>
 check it out by listing units is enrolled in<br/>
 <code>curl http://localhost:8080/learnplus/home/{user_id}/units</code><br/>
